@@ -87,7 +87,7 @@ int prit_hex(va_list ap, pr_t *pr);
 int prit_HEX(va_list ap, pr_t *pr);
 
 /* reverse and swap functions */
-int print_from_to(char *start, char *stop, *except);
+int print_from_to(char *start, char *end, *exp);
 int print_rev(va_list ap, pr_t *pr);
 int print_rot13(va_list ap, pr_t *pr);
 
