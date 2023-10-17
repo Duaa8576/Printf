@@ -8,25 +8,25 @@
 */
 int print_hex(va_list ap, pr_t *pr)
 {
-        unsigned long l;
-        int n = 0;
-        char *str;
+	unsigned long l;
+	int n = 0;
+	char *str;
 
-        if (pr->l)
-                l = (unsigned long)va_arg(ap, unsigned long);
-        else if (pr->h)
-                l = (unsigned short int)va_arg(ap, unsigned int);
-        else
-                l = (unsigned int)va_arg(ap, unsigned int);
+	if (pr->l)
+		l = (unsigned long)va_arg(ap, unsigned long);
+	else if (pr->h)
+		l = (unsigned short int)va_arg(ap, unsigned int);
+	else
+		l = (unsigned int)va_arg(ap, unsigned int);
 
-        str = convert(l, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, pr);
-        if (pr->hash && l)
-        {
-                *--str = 'x';
-                *--str = '0';
-        }
-        pr->uni = 1;
-        return (n += print_number(str, pr));
+	str = convert(l, 16, CONVERT_UNSIGNED | CONVERT_LOWERCASE, pr);
+	if (pr->hash && l)
+	{
+		*--str = 'x';
+		*--str = '0';
+	}
+	pr->uni = 1;
+	return (n += print_number(str, pr));
 
 }
 
@@ -37,27 +37,27 @@ int print_hex(va_list ap, pr_t *pr)
  * Return: Success
 */
 
+int print_HEX(va_list ap, pr_t *pr)
 {
-        unsigned long l;
-        int n = 0;
-        char *str;
+	unsigned long l;
+	int n = 0;
+	char *str;
 
-        if (pr->l)
-                l = (unsigned long)va_arg(ap, unsigned long);
-        else if (pr->h)
-                l = (unsigned short int)va_arg(ap, unsigned int);
-        else
-                l = (unsigned int)va_arg(ap, unsigned int);
+	if (pr->l)
+		l = (unsigned long)va_arg(ap, unsigned long);
+	else if (pr->h)
+		l = (unsigned short int)va_arg(ap, unsigned int);
+	else
+		l = (unsigned int)va_arg(ap, unsigned int);
 
-        str = convert(l, 16, CONVERT_UNSIGNED, pr);
-        if (pr->hash && l)
-        {
-                *--str = 'X';
-                *--str = '0';
-        }
-        pr->uni = 1;
-        return (n += print_number(str, pr));
-
+	str = convert(l, 16, CONVERT_UNSIGNED, pr);
+	if (pr->hash && l)
+	{
+		*--str = 'X';
+		*--str = '0';
+	}
+	pr->uni = 1;
+	return (n += print_number(str, pr));
 }
 
 /**
@@ -93,7 +93,7 @@ int print_octal(va_list ap, pr_t *pr)
 	int c = 0;
 
 	if (pr->l)
-		l= (unsigned long)va_arg(ap, unsigned long);
+		l = (unsigned long)va_arg(ap, unsigned long);
 	else if (pr->h)
 		l = (unsigned short int)va_arg(ap, unsigned int);
 	else
