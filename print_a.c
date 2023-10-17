@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	char *c, *start;
 	int summation = 0;
-	va_lsit ap;
+	va_list ap;
 	pr_t pr = PARAMS_INIT;
 
 	va_start(ap, format);
@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 		init_params(&pr, ap);
 		if (*c != '%')
 		{
-			summation += _putchar(*p);
+			summation += _putchar(*pr);
 			continue;
 		}
 		start = c;

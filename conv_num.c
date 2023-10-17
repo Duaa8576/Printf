@@ -73,7 +73,7 @@ int print_binary(va_list ap, pr_t *pr)
 	char *str = convert(n, 2, CONVERT_UNSIGNED, pr);
 	int c = 0;
 
-	if (pa->hash && n)
+	if (pr->hash && n)
 		*--str = '0';
 	pr->uni = 1;
 	return (c += print_number(str, pr));
@@ -98,7 +98,7 @@ int print_octal(va_list ap, pr_t *pr)
 		l = (unsigned short int)va_arg(ap, unsigned int);
 	else
 		l = (unsigned int)va_arg(ap, unsigned int);
-	str = convert(1, 8, CONVERT_UNSIGNED, pa);
+	str = convert(1, 8, CONVERT_UNSIGNED, pr);
 
 	if (pa->hash && l)
 		*--str = '0';
