@@ -6,7 +6,7 @@
  * @base: base
  * @flags: argument
  * @pr: struct
- *
+ * Return: success
 */
 char *convert(long int num, int base, int flags, pr_t *pr)
 {
@@ -20,8 +20,8 @@ char *convert(long int num, int base, int flags, pr_t *pr)
 		n = -num;
 		sign = '-';
 	}
-	arr = flags & CONVERT_LOWERCASE ? 
-		"0123456789abcdef" : "0123456789ABCDEF" ;
+	arr = flags & CONVERT_LOWERCASE;
+	"0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buff[49];
 	*ptr = '\0';
 
@@ -58,7 +58,7 @@ int print_unsigned(va_list ap, pr_t *pr)
 }
 
 /**
- * print_unsigned - unsigned integer.
+ * print_address - unsigned integer.
  * @ap: pointer
  * @pr: struct
  * Return: Success
