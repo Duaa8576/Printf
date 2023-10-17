@@ -37,8 +37,9 @@ int _printf(const char *format, ...)
 		c = get_precision(c, &pr, ap);
 		if (get_modifier(c, &pr))
 			c++;
-		if(!get_specifier(c))
-			summation += print_from_to(start, c, pr.l_modifier || pr.h_modifier ? c - 1 : 0);
+		if (!get_specifier(c))
+			summation += print_from_to(start, c, pr.l_modifier
+				       || pr.h_modifier ? c - 1 : 0);
 		else
 			summation += get_print_func(c, ap, &pr);
 	}
