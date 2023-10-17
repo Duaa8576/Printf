@@ -6,7 +6,7 @@
  * return: success
  */
 
-void init_params(pr_t *pr, va_list ap);
+void init_params(pr_t *pr, va_list ap)
 {
 	pr->uni = 0;
 	pr->zero = 0;
