@@ -81,10 +81,10 @@ int get_print_func(char *s, va_list ap, pr_t *pr);
 int (*get_specifier(char *s))(va_list ap, pr_t *pr);
 
 /* convert number functions */
-int prit_binary(va_list ap, pr_t *pr);
-int prit_octal(va_list ap, pr_t *pr);
-int prit_hex(va_list ap, pr_t *pr);
-int prit_HEX(va_list ap, pr_t *pr);
+int print_binary(va_list ap, pr_t *pr);
+int print_octal(va_list ap, pr_t *pr);
+int print_hex(va_list ap, pr_t *pr);
+int print_HEX(va_list ap, pr_t *pr);
 
 /* reverse and swap functions */
 int print_from_to(char *start, char *end, *exp);
