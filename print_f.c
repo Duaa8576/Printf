@@ -36,7 +36,7 @@ int print_int(va_list ap, pr_t *pr)
 		num = (short int)va_arg(ap, int);
 	else
 		num = (int)va_arg(ap, int);
-	return (print_number(convert(1, 10, 0, pr), pr));
+	return (print_number(convert(num, 10, 0, pr), pr));
 }
 
 /**
