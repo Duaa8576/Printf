@@ -15,7 +15,7 @@ int print_char(va_list ap, pr_t *pr)
 		sum += _putchar(c);
 	while (padn++ < pr->width)
 		sum += _putchar(pad);
-	if (!params->minus_flag)
+	if (!params->minus)
 		sum += _putchar(c);
 	return (sum);
 }
@@ -61,7 +61,7 @@ int print_string(va_list ap, pr_t *pr)
 
 		if (pr->minus)
 		{
-			if (pr->precision != UNIT_MAX)
+			if (pr->precision != UINT_MAX)
 				for (i = 0; j < padn; i++)
 					sum += _putchar(*str++);
 			else
@@ -100,7 +100,7 @@ int print_percent(va_list ap, pr_t *pr)
  * Return: Success
 */
 int print_s(va_list ap, pr_t *pr)
-{char *str = va_arg(ap, char *)
+{char *str = va_arg(ap, char *);
 	char *hex;
 	int s = 0;
 

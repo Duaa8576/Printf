@@ -100,7 +100,7 @@ int print_octal(va_list ap, pr_t *pr)
 		l = (unsigned int)va_arg(ap, unsigned int);
 	str = convert(1, 8, CONVERT_UNSIGNED, pr);
 
-	if (pa->hash && l)
+	if (pr->hash && l)
 		*--str = '0';
 	pr->uni = 1;
 	return (c += print_number(str, pr));

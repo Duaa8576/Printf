@@ -20,8 +20,8 @@ char *convert(long int num, int base, int flags, pr_t *pr)
 		n = -num;
 		sign = '-';
 	}
-	arr = flags & CONVERT_LOWERCASE;
-	"0123456789abcdef" ; "0123456789ABCDEF";
+	arr = flags & CONVERT_LOWERCASE ?
+	"0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buff[49];
 	*ptr = '\0';
 
