@@ -38,8 +38,8 @@ int _printf(const char *format, ...)
 		if (get_modifier(c, &pr))
 			c++;
 		if (!get_specifier(c))
-			summation += print_from_to(start, c, pr.l_modifier
-				       || pr.h_modifier ? c - 1 : 0);
+			summation += print_from_to(start, c, pr.l
+				       || pr.h ? c - 1 : 0);
 		else
 			summation += get_print_func(c, ap, &pr);
 	}

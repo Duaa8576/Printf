@@ -43,7 +43,7 @@ typedef struct PR
 	unsigned int l  : 1;
 
 	unsigned int width;
-	unsigned int preci;
+	unsigned int precision;
 } pr_t;
 
 /**
