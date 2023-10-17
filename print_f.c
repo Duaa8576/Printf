@@ -2,8 +2,8 @@
 
 /**
  * print_char - for characters
- * &ap: pointer
- * &pr: struct of pr
+ * @ap: pointer
+ * @pr: struct of prameter
  * Return: Success
 */
 int print_char(va_list ap, pr_t *pr)
@@ -22,13 +22,14 @@ int print_char(va_list ap, pr_t *pr)
 
 /**
  * print_int - for integar
- * &ap: pointer
- * &pr: struct of pr
+ * @ap: pointer
+ * @pr: struct of pr
  * Return: Success
 */
 int print_int(va_list ap, pr_t *pr)
 {
 	long num;
+
 	if (pr->l_modifier)
 		num = va_arg(ap, long);
 	else if (pr->h_modifier)
@@ -40,8 +41,8 @@ int print_int(va_list ap, pr_t *pr)
 
 /**
  * print_string - for string
- * &ap: pointer
- * &pr: struct of pr
+ * @ap: pointer
+ * @pr: struct of pr
  * Return: Success
 */
 int print_string(va_list ap, pr_t *pr)
@@ -53,7 +54,7 @@ int print_string(va_list ap, pr_t *pr)
 	switch ((int)(!str))
 	case 1:
 		str = NULL_STRING;
-		
+
 		j = padn = _strlen(str);
 		if (pr->precision < padn)
 			j = padn = pr->precision;
@@ -81,8 +82,8 @@ int print_string(va_list ap, pr_t *pr)
 
 /**
  * print_percent - for string
- * &ap: pointer
- * &pr: struct of pr
+ * @ap: pointer
+ * @pr: struct of pr
  * Return: Success
 */
 int print_percent(va_list ap, pr_t *pr)
@@ -94,8 +95,8 @@ int print_percent(va_list ap, pr_t *pr)
 
 /**
  * print_s - for specifier
- * &ap: pointer
- * &pr: struct of pr
+ * @ap: pointer
+ * @pr: struct of pr
  * Return: Success
 */
 int print_s(va_list ap, pr_t *pr)
