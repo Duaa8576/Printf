@@ -47,13 +47,13 @@ int print_unsigned(va_list ap, pr_t *pr)
 {
 	unsigned long num;
 
-	if (pr->l_modifier)
+	if (pr->l)
 		num = (unsigned long)va_arg(ap, unsigned long);
-	else if (pr->h_modifier)
+	else if (pr->h)
 		num = (unsigned short int)va_arg(ap, unsigned int);
 	else
 		num = (unsigned int)va_arg(ap, unsigned int);
-	pr->unsign = 1;
+	pr->uni = 1;
 	return (print_number(convert(num, 10, CONVERT_UNSIGNED, pr), pr));
 }
 

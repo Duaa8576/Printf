@@ -30,9 +30,9 @@ int print_int(va_list ap, pr_t *pr)
 {
 	long num;
 
-	if (pr->l_modifier)
+	if (pr->l)
 		num = va_arg(ap, long);
-	else if (pr->h_modifier)
+	else if (pr->h)
 		num = (short int)va_arg(ap, int);
 	else
 		num = (int)va_arg(ap, int);

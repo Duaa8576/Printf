@@ -19,6 +19,6 @@ void init_params(pr_t *pr, va_list ap);
 	pr->l = 0;
 
 	pr->width = 0;
-	pr->preci = UINT_MAX;
+	pr->precision = UINT_MAX;
 	(void)ap;
 }
