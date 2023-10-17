@@ -8,7 +8,7 @@
  * Return: Succuess
 */
 
-int print_from_to(char *start, char *end, *exp)
+int print_from_to(char *start, char *end, char *exp)
 {
 	int sum = 0;
 

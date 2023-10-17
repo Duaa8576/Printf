@@ -7,7 +7,7 @@
  */
 int (*get_specifier(char *s))(va_list ap, pr_t *pr)
 {
-	sp_t sp[] = {
+	sp_t sps[] = {
 		{"c", print_char},
 		{"d", print_int},
 		{"i", print_int},
@@ -26,11 +26,11 @@ int (*get_specifier(char *s))(va_list ap, pr_t *pr)
 	};
 	int i = 0;
 
-	while (sp[i].sp)
+	while (sps[i].sp)
 	{
-		if (*s == sp[i].sp[0])
+		if (*s == sps[i].sp[0])
 		{
-			return (sp[i].f);
+			return (sps[i].f);
 		}
 		i++;
 	}
@@ -130,7 +130,7 @@ char *get_width(char *s, pr_t *pr, va_list ap)
 	else
 	{
 		while (_isdigit(*s))
-			d = d * 10 + (*s++ - '0');
+			w = w * 10 + (*s++ - '0');
 	}
 	pr->width = w;
 	return (s);
