@@ -24,6 +24,6 @@ char get_precision(char *p, pr_t *pr, va_list ap)
 		while (_isdigit(*p))
 			a = a * 10 + (*p++ - '0');
 	}
-	pr->precision = d;
+	pr->precision = a;
 	return (p);
 }

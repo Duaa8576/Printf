@@ -26,7 +26,7 @@ int (*get_specifier(char *s))(va_list ap, pr_t *pr)
 	};
 	int i = 0;
 
-	while (sp[].sp)
+	while (sp[i].sp)
 	{
 		if (*s == sp[i].sp[0])
 		{
@@ -45,7 +45,7 @@ int (*get_specifier(char *s))(va_list ap, pr_t *pr)
  * Return: success
  */
 
-int get_print_func(char *s, va_list ap, pr_t *pr);
+int get_print_func(char *s, va_list ap, pr_t *pr)
 {
 	int (*f)(va_list, pr_t *) = get_specifier(s);
 
@@ -61,7 +61,7 @@ int get_print_func(char *s, va_list ap, pr_t *pr);
  * Return: success
  */
 
-int get_flag(char *s, pr_t *pr);
+int get_flag(char *s, pr_t *pr)
 {
 	int i = 0;
 
@@ -94,7 +94,7 @@ int get_flag(char *s, pr_t *pr);
  * Return: success
  */
 
-int get_modifier(char *s, pr_t *pr);
+int get_modifier(char *s, pr_t *pr)
 {
 	int i = 0;
 
@@ -118,7 +118,7 @@ int get_modifier(char *s, pr_t *pr);
  * Return: success
  */
 
-char *get_width(char *s, pr_t *pr, va_list ap);
+char *get_width(char *s, pr_t *pr, va_list ap)
 {
 	int w = 0;
 
