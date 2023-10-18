@@ -29,7 +29,7 @@
  * @l: long modifier specefied
  *
  * @width: width specefied
- * @preci: precision specefied
+ * @precision: precision specefied
  *
  */
 
@@ -103,6 +103,6 @@ int print_number_left_shift(char *str, pr_t *pr);
 
 /* other funcation */
 void init_params(pr_t *pr, va_list ap);
-char get_precision(char *p, pr_t *pr, va_list ap);
+char *get_precision(char *p, pr_t *pr, va_list ap);
 int _printf(const char *format, ...);
 #endif

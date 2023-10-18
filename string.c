@@ -5,9 +5,9 @@
  * @p: format string
  * @pr: parameter
  * @ap: pointer
- * Return: success
+ * Return: Success
  */
-char get_precision(char *p, pr_t *pr, va_list ap)
+char *get_precision(char *p, pr_t *pr, va_list ap)
 {
 	int a = 0;
 

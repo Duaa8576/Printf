@@ -99,7 +99,7 @@ int print_percent(va_list ap, pr_t *pr)
  * @pr: struct of pr
  * Return: Success
 */
-int print_s(va_list ap, pr_t *pr)
+int print_S(va_list ap, pr_t *pr)
 {char *str = va_arg(ap, char *);
 	char *hex;
 	int s = 0;

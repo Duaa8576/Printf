@@ -7,7 +7,7 @@
  */
 int (*get_specifier(char *s))(va_list ap, pr_t *pr)
 {
-	SP sp_t[] = {
+	sp_t sp[] = {
 		{"c", print_char},
 		{"d", print_int},
 		{"i", print_int},
@@ -22,15 +22,15 @@ int (*get_specifier(char *s))(va_list ap, pr_t *pr)
 		{"S", print_S},
 		{"r", print_rev},
 		{"R", print_rot13},
-		{NULL, NULL}
+		{NULL, NULL},
 	};
 	int i = 0;
 
-	while (sp_t[i].SP)
+	while (sp[i].SP)
 	{
-		if (*s == sp_t[i].SP[0])
+		if (*s == sp[i].SP[0])
 		{
-			return (sp_t[i].f);
+			return (sp[i].f);
 		}
 		i++;
 	}

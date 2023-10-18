@@ -6,7 +6,7 @@
  * Return: success
  */
 
-int _puts(char *str);
+int _puts(char *str)
 {
 	char *s = str;
 
@@ -21,7 +21,7 @@ int _puts(char *str);
  *  Return: success
  */
 
-int _putchar(int c);
+int _putchar(int c)
 {
 	static int i;
 	static char b[LOCAL_BUF_SIZE];
