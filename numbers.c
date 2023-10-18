@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * convert - converter function.
+ * convert - Number converter function.
  * @num: number
  * @base: base
  * @flags: argument
