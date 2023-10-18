@@ -58,7 +58,7 @@ int print_number(char *str, pr_t *pr)
 
 /**
  * print_number_right_shift - to number options
- * @str base number
+ * @str: base number
  * @pr: prameter
  * Return: success
  */
@@ -109,7 +109,7 @@ int print_number_right_shift(char *str, pr_t *pr)
 
 /**
  * print_number_left_shift - to number options
- * @str base number
+ * @str: base number
  * @pr: prameter
  * Return: success
  */

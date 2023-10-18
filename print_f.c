@@ -94,7 +94,7 @@ int print_percent(va_list ap, pr_t *pr)
 }
 
 /**
- * print_s - for specifier
+ * print_S - for specifier
  * @ap: pointer
  * @pr: struct of pr
  * Return: Success
