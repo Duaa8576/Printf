@@ -15,7 +15,7 @@ int print_char(va_list ap, pr_t *pr)
 		sum += _putchar(c);
 	while (padn++ < pr->width)
 		sum += _putchar(pad);
-	if (!params->minus)
+	if (!pr->minus)
 		sum += _putchar(c);
 	return (sum);
 }
