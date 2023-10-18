@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_from_to - print range
+ * print_from_to - print add range
  * @start: starting
  * @end: ending
  * @exp: except
