@@ -72,11 +72,11 @@ int print_number_right_shift(char *str, pr_t *pr)
 		pad = '0';
 	ng = ng2 = (!pr->uni && *str == '-');
 	if (ng && i < pr->width && pad == '0' && !pr->minus)
-		str++
+		str++;
 	else
 		ng = 0;
 	if ((pr->plus && !ng2) ||
-		(!pr->plus && pr->apace && !ng2))
+		(!pr->plus && pr->space && !ng2))
 		i++;
 	if (ng && pad == '0')
 		n += _putchar('-');
@@ -94,7 +94,7 @@ int print_number_right_shift(char *str, pr_t *pr)
 	else if (!pr->plus && pr->space && !ng2 &&
 			!pr->uni && !pr->zero)
 		n += _putchar(' ');
-	while (i++ pr->width)
+	while (i++ < pr->width)
 		n += _putchar(pad);
 	if (ng && pad == ' ')
 		n += _putchar('-');

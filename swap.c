@@ -15,7 +15,7 @@ int print_from_to(char *start, char *end, char *exp)
 	while (start <= end)
 	{
 		if (start != exp)
-			sum += _putcahr(*start);
+			sum += _putchar(*start);
 		start++;
 	}
 	return (sum);
