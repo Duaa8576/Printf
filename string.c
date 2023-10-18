@@ -5,14 +5,14 @@
  * @p: format string
  * @pr: parameter
  * @ap: pointer
- * Return: new pointer
+ * Return: Success
  */
-char get_precision(char *p, pr_t *pr, va_list ap)
+char *get_precision(char *p, pr_t *pr, va_list ap)
 {
 	int a = 0;
 
 	if (*p != '.')
-		return (*p);
+		return (p);
 	p++;
 	if (*p == '*')
 	{
@@ -25,5 +25,5 @@ char get_precision(char *p, pr_t *pr, va_list ap)
 			a = a * 10 + (*p++ - '0');
 	}
 	pr->precision = a;
-	return (*p);
+	return (p);
 }
