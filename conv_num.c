@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_hex - hex lower
+ * print_hex - hex lowercase
  * @ap: pointer
  * @pr: struct
  * Return: Success
