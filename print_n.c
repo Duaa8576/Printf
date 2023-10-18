@@ -12,7 +12,7 @@ int _isdigit(int c)
 }
 
 /**
- * _strlen - to string length
+ * _strlen - calc string length
  * @s: string
  * Return: success
  */
