@@ -29,7 +29,7 @@
  * @l: long modifier specefied
  *
  * @width: width specefied
- * @preci: precision specefied
+ * @precision: precision specefied
  *
  */
 
